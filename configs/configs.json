@@ -1,0 +1,26 @@
+{
+    "runtime": {
+        "mode": "LIVE",
+        "symbol": "WINFUT",
+        "timeframe": "M1",
+        "log_level": 1,
+        "investment_id": 12345,
+        "investment_key": "",
+        "investment_secret": "",
+        "investment_domain": "HML",
+        "fh_host": "0.0.0.0",
+        "fh_port": 1,
+        "fh_key": "",
+        "oms_host": "0.0.0.0",
+        "oms_port": 2,
+        "oms_key": "",
+        "sdk_host": "0.0.0.0",
+        "sdk_port": 4,
+        "sdk_key": ""
+    },
+    "strategy": {
+        "input_1": 10,
+        "input_2": 50,
+        "input_3": "TEST_ENUM",
+    }
+}
