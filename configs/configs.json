@@ -21,6 +21,6 @@
     "strategy": {
         "input_1": 10,
         "input_2": 50,
-        "input_3": "TEST_ENUM",
+        "input_3": "TEST_ENUM"
     }
 }
