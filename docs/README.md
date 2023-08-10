@@ -1,11 +1,11 @@
 # Classes públicas
-- [CTimeframe](timeframes_interface.hpp)
-- [CIndicatorsInterface](indicators_interface.hpp)
+- [CTimeframe](includes/timeframes_interface.hpp)
+- [CIndicatorsInterface](includes/indicators_interface.hpp)
 - CInputsInterface
 - COrdersInterface
-- [CPositionsInterface](positions_interface.hpp)
-- [CSymbolsInterface](symbols_interface.hpp)
-- [CTradeInterface](trade_interface.hpp)
+- [CPositionsInterface](includes/positions_interface.hpp)
+- [CSymbolsInterface](includes/symbols_interface.hpp)
+- [CTradeInterface](includes/trade_interface.hpp)
 
 # Indicadores
 - ADX
