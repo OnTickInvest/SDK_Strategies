@@ -7,8 +7,9 @@
 - [CSymbolsInterface](includes/symbols_interface.hpp)
 - [CTradeInterface](includes/trade_interface.hpp)
 
-# Enums
-- [enums.hpp](enums/enums.hpp)
+# Includes
+- [enums](enums/enums.hpp)
+- [structs](structs/structs.hpp)
 
 # Indicadores
 - [x] IND_ADX
