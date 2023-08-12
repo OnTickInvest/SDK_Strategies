@@ -75,7 +75,7 @@ void CApplication::OnTick(void)
             else
               {
                 // caso vendido (vira a mão)
-                if(position.PositionType(symbol)==POSITION_TYPE_SELL) trade.BuyMarket(symbol,volume*2,0,0,"[REV] Compra a mercado");
+                if(position.PositionType(symbol)==POSITION_TYPE_SELL) trade.BuyMarket(symbol,position.PositionVolume(symbol)+volume,0,0,"[REV] Compra a mercado");
                 // caso comprado (não faz nada)
               }
           }
@@ -93,7 +93,7 @@ void CApplication::OnTick(void)
             else
               {
                 // caso comprado (vira a mão)
-                if(position.PositionType(symbol)==POSITION_TYPE_BUY) trade.SellMarket(symbol,volume*2,0,0,"[REV] Venda a mercado");
+                if(position.PositionType(symbol)==POSITION_TYPE_BUY) trade.SellMarket(symbol,position.PositionVolume(symbol)+volume,0,0,"[REV] Venda a mercado");
                 // caso vendido (não faz nada)
               }
           }
