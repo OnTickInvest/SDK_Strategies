@@ -18,8 +18,8 @@ CPositionsInterface position;
 //+------------------------------------------------------------------+
 //| INPUTS                                                           |
 //+------------------------------------------------------------------+
-int volume = 1; // volume das operações
-int rsi_period = 2;
+int inp_volume = 1; // volume das operações
+int inp_rsi_period = 2;
 
 //+------------------------------------------------------------------+
 //|                                                                  |
@@ -43,8 +43,8 @@ void CApplication::OnInit(void)
     tf1.GetFromRuntime(symbol);
 
     // associação de inputs deve acontecer dentro de OnInit
-    volume = (inputs.Exists("volume")) ? std::stoi(inputs.GetStrategyParam("volume")) : 1;
-    rsi_period = (inputs.Exists("rsi_period")) ? std::stoi(inputs.GetStrategyParam("rsi_period")) : 2;
+    inp_volume = (inputs.Exists("volume")) ? std::stoi(inputs.GetStrategyParam("volume")) : 1;
+    inp_rsi_period = (inputs.Exists("rsi_period")) ? std::stoi(inputs.GetStrategyParam("rsi_period")) : 2;
 
     // IFR
     params.Reset();
@@ -77,13 +77,15 @@ void CApplication::OnDeinit(void)
     std::cout << "CApplication::OnDeinit() called" << std::endl;
     if(position.PositionFound(symbol))
       {
+        int curr_pos_volume = position.PositionVolume(symbol);
+        //
         if(position.PositionType(symbol)==POSITION_TYPE_BUY)
           {
-            trade.SellMarket(symbol,position.PositionVolume(symbol),0,0,"[EXIT] Venda a mercado");
+            trade.SellMarket(symbol,curr_pos_volume,0,0,"[EXIT] Venda a mercado");
           }
         else
           {
-            trade.BuyMarket(symbol,position.PositionVolume(symbol),0,0,"[EXIT] Compra a mercado");
+            trade.BuyMarket(symbol,curr_pos_volume,0,0,"[EXIT] Compra a mercado");
           }
       }
   }
