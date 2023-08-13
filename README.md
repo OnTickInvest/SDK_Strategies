@@ -8,7 +8,7 @@ Repositório público de estratégias desenvolvidas com a SDK da OnTick Invest
 - Apresentação de informações sobre IP whitelisting
 - Implementação da lógica anti-looping (rate limit de ordens)
 - Implementação de TP/SL automáticos
-- Atualização de exemplos / configs
+- Atualização de [exemplos](examples) e [configs](configs/configs.json)
 
 ### 0.4-alpha (08/08/2023):
 - Carregamento de posições abertas ao incializar
