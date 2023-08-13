@@ -19,6 +19,7 @@ CPositionsInterface position;
 //| INPUTS                                                           |
 //+------------------------------------------------------------------+
 int volume = 1; // volume das operações
+int rsi_period = 2;
 
 //+------------------------------------------------------------------+
 //|                                                                  |
@@ -41,9 +42,13 @@ void CApplication::OnInit(void)
     symbol.GetFromRuntime();
     tf1.GetFromRuntime(symbol);
 
+    // associação de inputs deve acontecer dentro de OnInit
+    volume = (inputs.Exists("volume")) ? std::stoi(inputs.GetStrategyParam("volume")) : 1;
+    rsi_period = (inputs.Exists("rsi_period")) ? std::stoi(inputs.GetStrategyParam("rsi_period")) : 2;
+
     // IFR
     params.Reset();
-    params.AddVariable("rsi_period",2);
+    params.AddVariable("rsi_period",rsi_period);
     rsi.Init(tf1,IND_RSI,params);
   }
 //+------------------------------------------------------------------+

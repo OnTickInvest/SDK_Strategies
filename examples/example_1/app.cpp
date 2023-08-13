@@ -8,6 +8,7 @@
 
 //
 COnTick ontick;
+CInputsInterface inputs;
 CSymbolsInterface symbol;
 CTimeframe tf1;
 CParams params;
@@ -20,6 +21,10 @@ CPositionsInterface position;
 //| INPUTS                                                           |
 //+------------------------------------------------------------------+
 int volume = 1; // volume das operações
+int short_ma_period = 8;
+int long_ma_period = 20;
+std::string short_ma_type = "MODE_SMA";
+std::string long_ma_type = "MODE_EMA";
 
 //+------------------------------------------------------------------+
 //|                                                                  |
@@ -42,16 +47,23 @@ void CApplication::OnInit(void)
     symbol.GetFromRuntime();
     tf1.GetFromRuntime(symbol);
 
+    // associação de inputs deve acontecer dentro de OnInit
+    volume = (inputs.Exists("volume")) ? std::stoi(inputs.GetStrategyParam("volume")) : 1;
+    short_ma_period = (inputs.Exists("short_ma_period")) ? std::stoi(inputs.GetStrategyParam("short_ma_period")) : 8;
+    short_ma_type = (inputs.Exists("short_ma_type")) ? inputs.GetStrategyParam("short_ma_type") : "MODE_SMA";
+    long_ma_period = (inputs.Exists("long_ma_period")) ? std::stoi(inputs.GetStrategyParam("long_ma_period")) : 20;
+    long_ma_type = (inputs.Exists("long_ma_type")) ? inputs.GetStrategyParam("long_ma_type") : "MODE_EMA";
+
     // média curta
     params.Reset();
-    params.AddVariable("ma_period",8);
-    params.AddVariable("ma_method","MODE_SMA");
+    params.AddVariable("ma_period",short_ma_period);
+    params.AddVariable("ma_method",short_ma_type);
     ma_short.Init(tf1,IND_MA,params);
 
     // média longa
     params.Reset();
-    params.AddVariable("ma_period",20);
-    params.AddVariable("ma_method","MODE_EMA");
+    params.AddVariable("ma_period",long_ma_period);
+    params.AddVariable("ma_method",long_ma_type);
     ma_long.Init(tf1,IND_MA,params);
   }
 //+------------------------------------------------------------------+

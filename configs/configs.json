@@ -19,8 +19,13 @@
         "sdk_key": ""
     },
     "strategy": {
-        "input_1": 10,
-        "input_2": 50,
-        "input_3": "TEST_ENUM"
+        "volume": 1,
+        "start_time": "9:30",
+        "limit_time": "17:00",
+        "end_time": "17:30",
+        "short_ma_period": 8,
+        "short_ma_type": "MODE_SMA",
+        "long_ma_period": 20,
+        "long_ma_type": "MODE_EMA"
     }
 }
