@@ -3,7 +3,7 @@ Repositório público de estratégias desenvolvidas com a SDK da OnTick Invest
 
 # Histórico de versões
 
-### 0.5-alpha (pre-release):
+### 0.5-alpha (15/08/2023):
 - Implementação da classe [CInputsInterface](docs/includes/inputs_interface.hpp)
 - Apresentação de informações sobre IP whitelisting
 - Implementação da lógica anti-looping (rate limit de ordens)
