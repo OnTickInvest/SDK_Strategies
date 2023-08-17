@@ -1,11 +1,12 @@
 # Classes públicas
 - [CTimeframe](includes/timeframes_interface.hpp)
 - [CIndicatorsInterface](includes/indicators_interface.hpp)
-- CInputsInterface
+- [CInputsInterface](includes/inputs_interface.hpp)
 - COrdersInterface
 - [CPositionsInterface](includes/positions_interface.hpp)
 - [CSymbolsInterface](includes/symbols_interface.hpp)
 - [CTradeInterface](includes/trade_interface.hpp)
+- CLoggerInterface
 
 # Includes
 - [enums](enums/enums.hpp)
