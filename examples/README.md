@@ -27,7 +27,8 @@ int inp_long_ma_period = 20;
 std::string inp_short_ma_type = "MODE_SMA";
 std::string inp_long_ma_type = "MODE_EMA";
 ```
-- O código acima define variáveis de input (que devem ser nomeadas com o prefixo `inp_`), como inp_volume, inp_short_ma_period, inp_long_ma_period, inp_short_ma_type e inp_long_ma_type. Esses parâmetros controlam o comportamento da estratégia de negociação e podem ser definidos pelo usuário através da seção `strategy` do arquivo `configs.json`. Abaixo temos um exemplo de arquivo `configs.json`, onde é possível ver onde as variáveis devem ser definidas:
+- O código acima define variáveis de input (que devem ser nomeadas com o prefixo `inp_`), como `inp_volume`, `inp_short_ma_period`, `inp_long_ma_period`, `inp_short_ma_type` e `inp_long_ma_type`.
+- Esses parâmetros controlam o comportamento da estratégia de negociação e podem ser definidos pelo usuário através da seção `strategy` do arquivo `configs.json`. Abaixo temos um exemplo de arquivo `configs.json`, onde é possível ver onde as variáveis devem ser definidas:
 ``` json
 {
     "runtime": {
