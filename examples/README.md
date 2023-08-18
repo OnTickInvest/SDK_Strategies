@@ -98,5 +98,5 @@ void CApplication::OnTimer(void)
 ```
 - A função `OnTimer` é chamada em intervalos regulares de tempo, por exemplo, a cada 30 segundos.
 - O intervalo mínimo entre as chamadas é de 1 segundo, enquanto que o intervalo máximo é de 300 segundos (5 minutos).
-- Um valor igual a 0 (zero) segundos desativa a função `OnTimer`.
+- Um valor igual a 0 (zero) segundos desativa a função `OnTimer`, e este é o valor padrão.
 - O intervalo de chamadas da função `OnTimer` deve ser definido dentro da função `OnInit`, através da função `ontick.SetTimer(int _seconds)` (disponível a partir da versão `0.6-alpha` da SDK).
