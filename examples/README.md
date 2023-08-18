@@ -73,11 +73,8 @@ void CApplication::OnTick(void)
 ## Função OnTrade
 ``` c++
 void CApplication::OnTrade(EXEC_REPORT _exec_report)
-  {
-    std::cout << "CApplication::OnTrade()" << std::endl;
-  }
 ```
-- A função `OnTrade` é chamada sempre que uma execução de negociação ocorre. No exemplo acima, a mesma está sendo usada apenas para fins informativos, sendo chamada a cada vez que uma execução ocorre.
+- A função `OnTrade` é chamada sempre que uma execução de negociação ocorre. Sempre que chamada, a função `OnTrade` atualiza a struct `_exec_report`, com todas as informações acerca da negociação que acabou de ocorrer. As variáveis contidas na struct `EXEC_REPORT` podem ser consultadas diretamente no arquivo [structs.hpp](../docs/structs/structs.hpp).
 
 ## Função OnDeinit
 ``` c++
