@@ -32,7 +32,7 @@ std::string inp_long_ma_type = "MODE_EMA";
 ``` json
 {
     "runtime": {
-        // variáveis de runtime aqui
+        
     },
     "strategy": {
         "volume": 1,
