@@ -54,8 +54,9 @@ int main(int argc,char *argv[])
     return 0;
   }
 ```
-- A função `main` é principal função de programas na linguagem C++. Ela inicializa a classe `COnTick` (chamando `ontick.Start(argc,argv)`), executa a estratégia de negociação (chamando `ontick.Run()`) e quando necessário finaliza a estratégia (chamando `ontick.Stop()`).
-- *IMPORTANTE: NENHUMA ALTERAÇÃO DEVE SER FEITA NESTA PARTE DO CÓDIGO!*
+- A função `main` é principal função de programas na linguagem C++. 
+- Ela inicializa a classe `COnTick` (chamando `ontick.Start(argc,argv)`), executa a estratégia de negociação (chamando `ontick.Run()`) e quando necessário finaliza a estratégia (chamando `ontick.Stop()`).
+- **IMPORTANTE: NENHUMA ALTERAÇÃO DEVE SER FEITA NESTA PARTE DO CÓDIGO!**
 
 ## Função OnInit
 ``` c++
