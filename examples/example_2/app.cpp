@@ -20,6 +20,8 @@ CPositionsInterface position;
 //+------------------------------------------------------------------+
 int inp_volume = 1; // volume das operações
 int inp_rsi_period = 2;
+int inp_lower_threshold = 25;
+int inp_upper_threshold = 75;
 
 //+------------------------------------------------------------------+
 //|                                                                  |
@@ -45,6 +47,8 @@ void CApplication::OnInit(void)
     // associação de inputs deve acontecer dentro de OnInit
     inp_volume = (inputs.Exists("volume")) ? std::stoi(inputs.GetStrategyParam("volume")) : 1;
     inp_rsi_period = (inputs.Exists("rsi_period")) ? std::stoi(inputs.GetStrategyParam("rsi_period")) : 2;
+    inp_lower_threshold = (inputs.Exists("lower_threshold")) ? std::stoi(inputs.GetStrategyParam("lower_threshold")) : 2;
+    inp_upper_threshold = (inputs.Exists("upper_threshold")) ? std::stoi(inputs.GetStrategyParam("upper_threshold")) : 2;
 
     // IFR
     params.Reset();
@@ -59,7 +63,7 @@ void CApplication::OnTick(void)
     // a cada nova barra
     if(tf1.IsNewBar())
       {
-        //  
+        //
       }
   }
 //+------------------------------------------------------------------+
