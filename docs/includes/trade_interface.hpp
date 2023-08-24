@@ -21,6 +21,8 @@ public:
     //
     std::pair<int,std::string>         BuyMarket(CSymbolsInterface _symbol, int _volume, float _tp, float _sl, const std::string &_comment);
     std::pair<int,std::string>         SellMarket(CSymbolsInterface _symbol, int _volume, float _tp, float _sl, const std::string &_comment);
+    //
+    void                               CloseAll(CSymbolsInterface _symbol);
   };
 
 #endif

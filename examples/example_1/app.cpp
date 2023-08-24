@@ -124,17 +124,6 @@ void CApplication::OnTrade(EXEC_REPORT _exec_report)
 void CApplication::OnDeinit(void)
   {
     std::cout << "CApplication::OnDeinit() called" << std::endl;
-    if(position.PositionFound(symbol))
-      {
-        int curr_pos_volume = position.PositionVolume(symbol);
-        //
-        if(position.PositionType(symbol)==POSITION_TYPE_BUY)
-          {
-            trade.SellMarket(symbol,curr_pos_volume,0,0,"[EXIT] Venda a mercado");
-          }
-        else
-          {
-            trade.BuyMarket(symbol,curr_pos_volume,0,0,"[EXIT] Compra a mercado");
-          }
-      }
+    // fecha todas as ordens e posições
+    trade.CloseAll(symbol);
   }
