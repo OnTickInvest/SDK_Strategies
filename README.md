@@ -3,9 +3,12 @@ Repositório público de estratégias desenvolvidas com a SDK da OnTick Invest
 
 # Histórico de versões
 
-### 0.6-alpha (pre-release):
+### 0.6-alpha (17/09/2023):
 - Implementação da função de manipulação de eventos OnTimer
-- Implementação da classe CLoggerInterface
+- Implementação da função de manipulação de eventos OnTrade
+- Implementação da classe [CLoggerInterface](docs/includes/logger_interface.hpp)
+- Implementação da classe [CTimeInterface](docs/includes/time_interface.hpp)
+- Implementação de múltiplos IP's no whitelisting
 
 ### 0.5-alpha (15/08/2023):
 - Implementação da classe [CInputsInterface](docs/includes/inputs_interface.hpp)
