@@ -3,6 +3,9 @@ Repositório público de estratégias desenvolvidas com a SDK da OnTick Invest
 
 # Histórico de versões
 
+### 0.7-alpha (em desenvolvimento):
+- Suporte a gráficos atemporais (renko / range / pontos / trades / volume)
+- Suporte a gráficos de segundos 
 ### 0.6-alpha (17/09/2023):
 - Implementação da função de manipulação de eventos OnTimer
 - Implementação da função de manipulação de eventos OnTrade
