@@ -24,7 +24,7 @@ private:
 public:
     //
     void                               Init(CTimeframe _timeframe,ENUM_INDICATORS _indicator,CParams params);
-    double                             ValueAt(int _buffer_number, int _position); // OBS: _position deve ser um valor de 0 a 199
+    float                              ValueAt(int _buffer_number, int _position); // OBS: _position deve ser um valor de 0 a 199
     void                               PrintLastValues(int _num_values=5); // OBS: _num_values deve ser um valor de 1 a 10
   };
 
