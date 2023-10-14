@@ -6,7 +6,9 @@ Repositório público de estratégias desenvolvidas com a SDK da OnTick Invest
 ### 0.7-alpha (em desenvolvimento):
 - Suporte a gráficos atemporais (renko / range / pontos / trades / volume)
 - Suporte a gráficos de segundos
-- Alteração de variáveis de indicadores de double para float
+- Alteração de variáveis do tipo double para float
+- Novos indicadores técnicos (PSAR, STOCH, MACD, KELTNER, HMA)
+
 ### 0.6-alpha (17/09/2023):
 - Implementação da função de manipulação de eventos OnTimer
 - Implementação da função de manipulação de eventos OnTrade
