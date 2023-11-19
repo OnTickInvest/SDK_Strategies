@@ -7,7 +7,11 @@ Repositório público de estratégias desenvolvidas com a SDK da OnTick Invest
 - Suporte a gráficos atemporais (renko / range / pontos / trades / volume)
 - Suporte a gráficos de segundos
 - Alteração de variáveis do tipo double para float
-- Novos indicadores técnicos (PSAR, STOCH, MACD, KELTNER, HMA)
+- Novos indicadores técnicos
+  - ParabolicSAR, Stochastics, Macd, Keltner, HMA (Hull MA)
+  - BB_Width, BearsPower, BullsPower, DidiIndex, DonchianChannels, Envelopes, Gmma
+  - Ichimoku, OBV, VolHist (Volatilidade Histórica)
+- Alteração do formato da classe `CApplication` para `public COnTick`
 
 ### 0.6-alpha (17/09/2023):
 - Implementação da função de manipulação de eventos OnTimer
