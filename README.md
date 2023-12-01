@@ -12,6 +12,8 @@ Repositório público de estratégias desenvolvidas com a SDK da OnTick Invest
   - BB_Width, BearsPower, BullsPower, DidiIndex, DonchianChannels, Envelopes, Gmma
   - Ichimoku, OBV, VolHist (Volatilidade Histórica)
 - Alteração do formato da classe `CApplication` para `public COnTick`
+- Alteração da função OnInit para bool
+- Correção de bug na função CloseAll
 
 ### 0.6-alpha (17/09/2023):
 - Implementação da função de manipulação de eventos OnTimer
